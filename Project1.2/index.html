@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justin's demo game</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Justin's Wizard Wars</h1>
+        
+        
+
+    </header>
+    <div class ="wrapper">
+        <div class="Dyslexic">
+            <button class="Dyslexic1">Click here for dsyxelic friendly font!</button>
+    
+        </div>
+        <div class="gameOver"></div>
+
+        <div class="replay">
+            <form>
+                <input type="button" value="replay" onclick="replay()">
+            </form>
+        </div>
+
+        <div class="start">
+            <form>
+                <input type="button" value="START!" onclick="rules()">
+            </form>
+        </div>
+        <div class ="rules">
+            <h2>Quick Guide</h2>
+            <p>The goal of this game is to kill the enemy Wizard by redusing their hp to zero before your hp is redused to zero.You have a bunch of spells to do so. Turn order is as follows, you click a movement action, the enemy moves, the enemy picks an attack you are currently in range of, then you move and finally then you can choose a spell. The enemy will give you a clue as to their attack before you choose your spell. If stragize correctly you can stay out of range of the enemies attack almost always. Almost all your spells deal an amount of damage but only hit within certain ranges and have mp costs. The exceptions are shield (which completely blocks the next attack), mediate (which restores mp), restore (which heals hp), and charge and retreat(which change your distance). There's a guide at the bottom giving you the details of each spell.</p>
+            <form>
+                <input type="button" value="GOT IT!" onclick="start()">
+            </form>
+
+        </div>
+
+        <div class="duel">
+            <div class="playerStats">
+                <h2>You</h2>
+                <div class="playerAvatar">
+                    <img src="https://media.giphy.com/media/29NDhZxIz8nTy/giphy.gif" alt="Your Wizard avatar">
+                </div>
+                <p class="php"></p>
+                <p class="pmp"></p>
+                <p class="pmove"></p>
+                <p class="pLastSpell"></p>
+                <p class="pmiss"></p>
+                <p class="shielded"></p>
+            </div>
+
+            <div class ="playerSpell"></div>
+            <div class ="foeSpell"></div>
+            
+            
+            <div class="foeStats">
+                <h2>Foe</h2>
+                <div class="foeAvatar">
+                    <img src="https://media.giphy.com/media/VFzysZPJqNRPq/giphy.gif" alt="Your foe's avatar">
+                </div>
+                <p class="fhp"></p>
+                <p class="fmp"></p>
+                <p class="fmove"></p>
+                <p class="fdescription"></p>
+                <p class="fLastSpell"></p>
+                <p class="miss"></p>
+            </div>
+        </div>
+
+        <p class="distance"></p>
+
+        <div class ="movement">
+            <div class="back15"><p>Back 15 ft.</p></div>
+            <div class="back10"><p>Back 10 ft.</p></div>
+            <div class="back5"><p>Back 5 ft.</p></div>
+            <div class="hold"><p>Hold</p></div>
+            <div class="forward5"><p>Forward 5 ft.</p></div>
+            <div class="forward10"><p>Forward 10 ft.</p></div>
+            <div class="forward15"><p>Forward 15 ft.</p></div>
+        </div>
+
+        <div class ="spells">
+            <div class ="shield"><p>Shield</p></div>
+            <div class ="mediate"><p>Arcane Meditation</p></div>
+            <div class ="heal"><p>Lesser Restore</p></div>
+            <div class ="charge"><p>Furious Charge</p></div>
+            <div class ="back"><p>Shadow Retreat</p></div>
+            <div class ="sword"><p>Phantasma Sword</p></div>
+            <div class ="fire"><p>Fire Blast</p></div>
+            <div class ="earth"><p>Earth Wave</p></div>
+            <div class ="lightning"><p>Lightning Strike</p></div>
+            <div class ="hail"><p>Hail Storm</p></div>
+            <div class ="star"><p>Starfall</p></div>
+            <div class ="missile"><p>Magic Missile</p></div>
+            
+        </div>
+        <div class="replay">
+            <form>
+                <input type="button" value="replay" onclick="replay()">
+            </form>
+        </div>
+        
+        <div class="help">
+            <form>
+                <input type="button" value="help" onclick="help()">
+            </form>
+        </div>
+
+        <div class="guide">
+            <h3>Spell Guide: </h3>
+                <p class ="list">
+                    Shield :           Blocks next attack   Range: Any        Cost: 10 mp<br>
+                    Arcane Mediation : Gives 25 mp          Range: Any        Cost: 0 mp<br>
+                    Lesser Restore   : Gives 15 hp          Range: Any        Cost: 25 mp<br>
+                    Furious Charge   : Move 30 ft. forward  Range: >= 30 ft.  Cost: 10 mp<br>
+                    Shadow Retreat   : Move 20 ft. back     Range: Any        Cost: 15 mp<br>
+                    Phantasma Sword  : Deals 20-40 Damage   Range: 0-10 ft.   Cost: 25 mp<br>
+                    Fire Blast       : Deals 15-25 Damage   Range: 0-30 ft.   Cost: 20 mp<br>
+                    Earth Wave       : Deals 10-15 Damage   Range: 20-60 ft.  Cost: 25 mp<br>
+                    Lightning Strike : Deals 20-40 Damage   Range: 50-80 ft.  Cost: 35 mp<br>
+                    Hail Storm       : Deals 10-30 Damage   Range: 75-100 ft. Cost: 30 mp<br>
+                    Starfall         : Deals 15-20 Damage   Range: >= 100 ft. Cost: 50 mp<br>
+                    Magic Missile    : Deals 5-10  Damage   Range: Any        Cost: 40 mp<br>
+                </p>
+
+                <p> 
+                    <strong>Tips: </strong> Your opponent picks an attack within range before you finish moving, try to stay out of range and you'll take no damage. All your spells are the same as the opponents with 4 exceptions. Your opponent doesn't have Furious Charge or Shadow Retreat, so they can't move during the spell casting phase but you can. They also don't have the shield spell, so they can never block your attacks but you can block theirs. They do have a spell you don't have called Apex Smite. Apex Smite can hit you from any range and deals 80 damage, however it burns 65 mp so if your foe has 60 mp or less they cannot cast it. You can also block it with your shield spell.    
+                </p>
+
+            <form>
+                <input type="button" value="Got It!" onclick="helpAway()">
+            </form>
+        </div>
+    </div>
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

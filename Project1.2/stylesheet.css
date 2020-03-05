@@ -1,0 +1,415 @@
+body{
+margin: 0 auto;
+background-image: url(./assets/SIGILS.png);
+background-size: 10%;
+}
+h1{
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 50px;
+}
+.start{
+    text-align: center;
+    padding: 50px;
+    
+}
+.start input{
+    height: 50px;
+    width: 100px;
+    background-color: chartreuse;
+    color: white;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    border-radius: 50%;
+}
+
+.wrapper{
+    margin-left: 10vw;
+    margin-right: 10vw;
+    background-image: url(./assets/parchment3.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 90vh;
+    height: auto;
+    padding: 5%;
+
+}
+
+.rules{
+    display: none;
+    padding: 50px;
+    background-color: peru;
+    border: 3px solid black;
+}
+
+.rules h2{
+    text-align: center;
+    border-bottom: 3px solid black;
+}
+
+.rules input{
+    height: 50px;
+    width: 100px;
+    background-color: chartreuse;
+    color: white;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    border-radius: 50%;
+    margin-left: calc(50% - 50px);
+}
+
+.duel{
+    display: none;
+    justify-content: space-around;
+    /* padding: 5%; */
+}
+
+
+.playerStats{
+    width: 20%;
+    text-align: left;
+}
+
+.foeStats{
+    width: 20%;
+    text-align: right;
+
+}
+.distance{
+    text-align: center;
+}
+
+
+.spells{
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
+.spells p{
+    padding-top: 20%;
+    color: #fff;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+.spells div{
+    margin: 20px;
+    border: 5px solid black;
+    height: 9%;
+    width: 18%;
+    border-radius: 15%;
+}
+
+.movement{
+    display : none;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}  
+
+.movement div{
+    text-align: center;
+    height: 9%;
+    width: 18%;
+    border: 5px solid black;
+    margin: 25px;
+    border-radius: 15%;
+}
+
+
+.movement p{
+    padding-top: 20%;
+    
+    color: #fff;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
+.spell div img{
+    background-size: inherit;
+}
+
+
+.shield{
+    
+    background-image: url(./assets/shield.png);
+    background-size: cover;
+    color: whitesmoke;
+    text-align: center;
+    
+
+}
+
+.mediate{
+    background-image: url(./assets/amediate.png);
+    background-size: cover;
+    color: whitesmoke;
+    text-align: center;
+}
+.heal{
+    background-image: url(./assets/lrestore.png);
+    background-size: cover;
+    color: whitesmoke;
+    text-align: center;
+}
+.charge{
+    background-image: url(./assets/lcharge.png);
+    background-size: cover;
+    color: whitesmoke;
+    text-align: center;
+    
+}
+.back{
+    background-image: url(./assets/shadow.png);
+    background-size: cover;
+    color: whitesmoke;
+    text-align: center; 
+    
+    
+}
+.sword{
+    background-image: url(./assets/sword.png);
+    background-size: cover;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.fire{
+    background-image: url(./assets/fire.png);
+    background-size: cover;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.earth{
+    background-image: url(./assets/earth.png);
+    background-size: cover;
+    color: whitesmoke;
+    text-align: center;
+}
+.lightning{
+    background-image: url(./assets/lightning.png);
+    background-size: cover;
+    color: whitesmoke;
+    text-align: center;
+}
+.star{
+    background-image: url(./assets/star.png);
+    background-size: cover;
+    color: whitesmoke;
+    text-align: center;
+}
+.hail{
+    background-image: url(./assets/hail.png);
+    background-size: cover;
+    color: black;
+    text-align: center;
+}
+.missile{
+    background-image: url(./assets/mm.png);
+    background-size: cover;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.fhp, .php{
+    color: red;
+}  
+
+.fmp, .pmp{
+    color: blue;
+}  
+
+.replay{
+    display: none;
+}
+
+.guide{
+    display: none;
+    padding: 50px;
+    background-color: peru;
+    border: 3px solid black;
+}
+.list{
+    text-align: justify;
+}
+
+.back15{
+    background-image: url(./assets/back15.png);
+    background-size: cover;
+}
+
+.back10{
+    background-image: url(./assets/back10.png);
+    background-size: cover;
+}
+
+.back5{
+    background-image: url(./assets/back5.png);
+    background-size: cover;
+}
+
+.forward5{
+    background-image: url(./assets/for5.png);
+    background-size: cover;
+}
+
+.forward10{
+    background-image: url(./assets/for10.png);
+    background-size: cover;
+}
+
+.forward15{
+    background-image: url(./assets/for15.png);
+    background-size: cover;
+}
+
+.hold{
+    background-image: url(./assets/hold.png);
+    background-size: cover;
+    
+}
+
+.help{
+    display: none;
+    
+}
+
+.plainImg{
+    margin-top: 10%;
+}
+
+.hFlipImg{
+    margin-top: 10%;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1)
+}
+.Rotate315Img{
+    margin-top: 10%;
+    -o-transform: rotate(315deg);
+    transform: rotate(315deg);
+}
+
+.Rotate135Img{
+    margin-top: 10%;
+    -o-transform: rotate(315deg);
+    transform: rotate(315deg);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1)
+}
+
+.Rotate270Img{
+    margin-top: 10%;
+    -o-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+.Rotate90Img{
+    margin-top: 10%;
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.help input{
+    height: 50px;
+    width: 100px;
+    background-color: orangered;
+    color: white;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    border-radius: 50%;
+    margin-left: calc(50% - 50px);
+}
+
+h4{
+    font-size: 45px;
+    color: orangered;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    text-align: center;
+}
+
+h5{
+    font-size: 45px;
+    color: chartreuse;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    text-align: center;
+}
+
+.replay{
+    text-align: center;
+    padding: 50px;
+    
+}
+.replay input{
+    height: 50px;
+    width: 100px;
+    background-color: chartreuse;
+    color: white;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    border-radius: 50%;
+}
+.guide input{
+    height: 50px;
+    width: 100px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+}
+@font-face {
+    font-family: DyslexicFont;
+    src: url(./assets/OpenDyslexic-Bold.otf);
+
+}
+@font-face{
+    font-family: wizard;
+    src: url(./assets/IMMORTAL.ttf);
+}
+
+.Dyslexic{
+    position: fixed;
+    top: 5%;
+    right:5%;
+}
+.Dyslexic1{
+    font-family: DyslexicFont;
+    padding: 10px;
+    font-size: 15px;
+}
+.Dyslexic2{
+    
+    font-family: DyslexicFont;
+    
+}
+
+h1, h4, h5{
+    font-family: wizard;
+
+}
+
+
+.playerStats, .foeStats{
+    position: static;
+}
+
+
+.foeSpell img, .playerSpell img{
+    width: 20vw;
+    height: auto;
+    position: relative;
+    top: 75px;
+}
+    
+.playerAvatar img{
+    height: auto;
+    width: 18vw;
+}
+
+.foeAvatar img{
+    width: 18vw;
+    height: calc(18vw * 1.2);
+}
+
+
+
+
+
+
+
+
